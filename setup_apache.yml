@@ -1,0 +1,10 @@
+---
+- hosts: 54.202.197.223
+  sudo: yes
+  tasks:
+    - name: install apache2
+      yum: name=httpd state=latest
+    - name: start apache
+      service: name=httpd state=started    
+    - name: no of files in directory
+      command: /sbin/reboot 
